@@ -32,32 +32,9 @@
   text-shadow: 0 0 25px rgb(255, 255, 255), 0 0 18px rgb(255, 255, 255);
 }
 
-.btnDetalhes{
-  width: 80%;
-  height: 32.5px;
-  margin: 10px 0;
-}
-
-.btnDetalhes:nth-child(2){background-color: rgb(233, 61, 61);}
-.btnDetalhes:nth-child(2):hover{background-color: rgb(202, 53, 53);}
 
 @media screen and (max-width: 600px){
-  .btnDetalhes{
-    width: 45%;
-  }
-
   .linhaPrincipal{display: none;}
 
-  .coluna1{width: 20%;}
-  .coluna2, .coluna3{width: 39%;}
-  .coluna4, .coluna5{
-    width: 50%;
-  }
-
-  .coluna6{width: 100%;}
-
-  .btnDetalhes{
-    width: 100%;
-    margin: 10px 12.5px 20px 12.5px;
-  }
+  .coluna1, .coluna2, .coluna3, .coluna4, .coluna5, .coluna6{width: 100%;}
 }

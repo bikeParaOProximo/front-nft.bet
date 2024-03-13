@@ -12,11 +12,12 @@ import useRotas from "./hooks/useRotas";
 import { Outlet } from "react-router-dom";
 import PrivatePage from './pages/privadas/PrivatePage';
 import AdminPage from "./pages/privadas/AdminPage";
+import GamePage from "./pages/privadas/GamePage";
 
 
 function App() {
 
-  const {verificarSeRotaEPublica, verificarSeRotaEAdministrativa} = useRotas();
+  const {verificarSeRotaEPublica, verificarSeRotaEPrivada, verificarSeRotaEDeGames, verificarSeRotaEAdministrativa} = useRotas();
 
   return (
     <>
@@ -28,19 +29,24 @@ function App() {
         ) : (
           <>
             <MenuBar/>
-            <Header/>
-            {verificarSeRotaEPublica() ? <Outlet/> 
-              : (
+            <Header/> 
+            {
+              verificarSeRotaEPublica() ? (
+                <Outlet/>
+              ) : verificarSeRotaEPrivada() ? (
                 <PrivatePage>
                   <Outlet/>
                 </PrivatePage>
+              ) : verificarSeRotaEDeGames() && (
+                <GamePage>
+                  <Outlet/>
+                </GamePage>
               )
             }
             <Footer/>
           </>
         )
       }
-
     
       <MessageBox/>
       <CardLoader/>
@@ -48,4 +54,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

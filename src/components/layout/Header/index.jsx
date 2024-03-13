@@ -19,6 +19,10 @@ export default function Header(){
   return(
     <header className={styles.header}>
       <div className={styles.margemHeader}>
+        <label htmlFor="check">
+          <img src={iconMenu} className={styles.iconMenu} />
+        </label>
+
         <Link to={"/"} className={styles.linkLogo}>
          <img src={logo} className={styles.logo} />
         </Link>
@@ -43,13 +47,7 @@ export default function Header(){
             </>
           )}
         </div>
-
-        <label htmlFor="check">
-          <img src={iconMenu} className={styles.iconMenu} />
-        </label>
       </div>
     </header>
   )
 }
-
-//<img src={logoPatosBet} className={styles.logo} alt='logo' />

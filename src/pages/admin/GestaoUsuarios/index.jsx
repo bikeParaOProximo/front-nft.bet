@@ -10,6 +10,10 @@ import { useState } from 'react';
 import useDadosUsuario from '../../../hooks/useDadosUsuario';
 import BotaoLink from '../../../components/BotaoLink';
 
+//Utils
+import formatarCPF from '../../../utils/formatarCPF';
+
+
 
 export default function GestaoUsuarios(){
 
@@ -73,7 +77,7 @@ export default function GestaoUsuarios(){
               </div>
 
               <div className={styles.coluna4}>
-                <p className={styles.textoLinha}>{usuario.cpf}</p>
+                <p className={styles.textoLinha}>{formatarCPF(usuario.cpf)}</p>
               </div>
 
               <div className={styles.coluna5}>
@@ -84,7 +88,9 @@ export default function GestaoUsuarios(){
                 <BotaoLink
                   estilizacao={"detalhes"}
                   destino={"/adm/usuario/".concat(usuario.id)}
-                >Detalhes</BotaoLink>
+                >
+                  Detalhes
+                </BotaoLink>
               </div>
             </div>
           ))

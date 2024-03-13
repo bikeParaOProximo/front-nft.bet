@@ -1,4 +1,5 @@
 //components
+import Loader from '../../../components/Loader';
 import FormularioBonus from '../../../components/formularios/FormularioBonus';
 import Container from '../../../components/layout/Container';
 import HeaderAdmin from '../../../components/layout/HeaderAdmin';
@@ -17,13 +18,16 @@ export default function EditarBonus(){
         destino={"/adm/bonus"}
       />
 
-      
-      <FormularioBonus
-        bonus={bonus}
-        preencherBonus={preencherBonus}
-        executarAcao={editarBonus}
-        txtBotao={"Editar"}
-      />
+      {
+        bonus.codigo ? (
+          <FormularioBonus
+            bonus={bonus}
+            preencherBonus={preencherBonus}
+            executarAcao={editarBonus}
+            txtBotao={"Editar"}
+          />
+        ) : <Loader/>
+      }
     </Container>
   )
 }

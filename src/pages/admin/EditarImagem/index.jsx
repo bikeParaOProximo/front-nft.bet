@@ -1,4 +1,5 @@
 //Components
+import Loader from '../../../components/Loader';
 import FormularioBonus from '../../../components/formularios/FormularioBonus';
 import FormularioImagem from '../../../components/formularios/FormularioImagem';
 import Container from '../../../components/layout/Container';
@@ -18,12 +19,16 @@ export default function EditarImagem(){
         destino={"/adm/imagens"}
       />
 
-      <FormularioImagem
-        imagem={imagem}
-        preencherImagem={preencherImagem}
-        executarAcao={salvarImagem}
-        txtBotao={"Editar"}
-      />
+      {
+        imagem.codigo ? (
+          <FormularioImagem
+            imagem={imagem}
+            preencherImagem={preencherImagem}
+            executarAcao={salvarImagem}
+            txtBotao={"Editar"}
+          />
+        ) : <Loader/>
+      }
     </Container>
   )
 }

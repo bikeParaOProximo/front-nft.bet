@@ -48,13 +48,5 @@
 
   .linhaPrincipal{display: none;}
 
-  .coluna2{width: 20%;}
-  .coluna3{width: 25%;}
-  .coluna4{width: 37.5%;}
-
-  .coluna5{
-    width: 100%;
-  }
-
-  .btnDetalhes{margin: 10px 0 20px 0;}
+  .coluna2, .coluna3, .coluna4, .coluna5{width: 100%;}
 }

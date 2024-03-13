@@ -5,6 +5,8 @@ import { rotasPublicas } from "../constants/rotasPublicas";
 import useFormularios from '../hooks/useFormularios';
 import { rotasAdmin } from "../constants/rotasAdmin";
 import useAdminSessao from "./useAdminSessao";
+import rotasPrivadas from "../constants/rotasPrivadas";
+import rotasDeGames from "../constants/rotasDeGames";
 
 const useRotas = () => {
 
@@ -16,7 +18,15 @@ const useRotas = () => {
 
   const verificarSeRotaEPublica = () => {
     return rotasPublicas.includes(location.pathname);
-  }  
+  } 
+  
+  const verificarSeRotaEPrivada = () => {
+    return rotasPrivadas.includes(location.pathname);
+  } 
+
+  const verificarSeRotaEDeGames = () => {
+    return rotasDeGames.includes(location.pathname);
+  } 
 
   const verificarSeRotaEAdministrativa = () => {
     let pathSemParametros = "/"+location.pathname.split("/")[1]+"/"+location.pathname.split("/")[2];
@@ -43,7 +53,14 @@ const useRotas = () => {
     useEffect(() => {
       if(!sessao) {
         navigate("/");
-        exibirFormularioLogin();
+      }
+    }, [sessao])
+  }
+
+  const bloquearRotaDeGames = () => {
+    useEffect(() => {
+      if(!sessao) {
+        navigate("/login");
       }
     }, [sessao])
   }
@@ -56,8 +73,8 @@ const useRotas = () => {
 
 
   return {
-          verificarSeRotaEPublica, verificarSeRotaEAdministrativa,
-          bloquearRotaPublica, bloquearRotaLoginAdmin, bloquearRotaPrivada, bloquearRotaAdmin
+          verificarSeRotaEPublica, verificarSeRotaEPrivada, verificarSeRotaEDeGames, verificarSeRotaEAdministrativa,
+          bloquearRotaPublica, bloquearRotaLoginAdmin, bloquearRotaPrivada, bloquearRotaDeGames, bloquearRotaAdmin
         };
 }
 

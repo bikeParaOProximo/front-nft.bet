@@ -52,16 +52,5 @@
 
   .linhaPrincipal{display: none;}
 
-  .coluna1{width: 20%;}
-  .coluna2, .coluna3{width: 39%;}
-  .coluna4, .coluna5{
-    width: 50%;
-  }
-
-  .coluna6{width: 100%;}
-
-  .btnDetalhes{
-    width: 100%;
-    margin: 10px 12.5px 20px 12.5px;
-  }
+  .coluna2, .coluna3, .coluna4, .coluna5, .coluna6{width: 100%;}
 }

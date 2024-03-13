@@ -1,6 +1,6 @@
 .header{
   width: 100%;
-  height: 7.5vh;
+  height: 9vh;
   display: flex;
   justify-content: center;
   background: var(--elementos);
@@ -12,7 +12,7 @@
   width: 32.5px;
   cursor: pointer;
   filter: brightness(95%);
-  margin-left: 7.5px;
+  margin-right: 20px;
 }
 
 .margemHeader{
@@ -53,7 +53,7 @@
 .logo{width: 100%;}
 
 .linkLogo{
-  width: 160px;
+  width: 140px;
   margin-right: auto;
 }
 

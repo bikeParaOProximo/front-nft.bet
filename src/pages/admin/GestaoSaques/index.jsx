@@ -62,7 +62,7 @@ export default function GestaoSaques(){
 
         {
           saques.slice().reverse().filter((saque) => saque.statusSaque == ordenar)
-          .filter((saque) => saque.usuario.toLowerCase().includes(filtro.toLowerCase()))
+          .filter((saque) => saque.email.toLowerCase().includes(filtro.toLowerCase()))
           .map((saque, index) => (
             <div key={saque.codigo} className={styles.linha+" "+styles[(index % 2 == 0) ? "par" : "impar"]}>
               <div className={styles.coluna1}>
@@ -81,7 +81,7 @@ export default function GestaoSaques(){
               </div>
 
               <div className={styles.coluna4}>
-                <p className={styles.textoLinha}>{saque.usuario}</p>
+                <p className={styles.textoLinha}>{saque.email.length > 9 ? saque.email.substring(0, 10)+"..." : saque.email}</p>
               </div>
 
               <div className={styles.coluna5}>

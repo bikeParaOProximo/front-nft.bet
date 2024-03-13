@@ -51,7 +51,7 @@
   width: 87.5%;
   display: flex;
   flex-wrap: wrap;
-  margin: 25px 0;
+  margin: 30px 0;
 }
 
 /*dadis pessoais*/
@@ -221,7 +221,7 @@
 
 .margemHistoricoDepositos{
   width: 90%;
-  margin: 25px 0;
+  margin: 30px 0;
 }
 
 .linha{

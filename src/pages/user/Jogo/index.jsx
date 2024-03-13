@@ -11,8 +11,9 @@ export default function Jogo(){
   const navigate = useNavigate();
   const jogo = (location.state) ? location.state.srcJogo : null;
 
+
   useEffect(() => {
-    if(!jogo) navigate("/")
+    if(!jogo) navigate("/login")
   }, [])
 
   return(

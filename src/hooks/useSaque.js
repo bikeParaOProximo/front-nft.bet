@@ -113,10 +113,12 @@ const useSaque = () => {
   const [detalhesSaque, setDetalhesSaque] = useState({});
 
   const buscarSaque = (codigoSaque) => {
+    exibirCardLoader();
     api.get("/saques/".concat(codigoSaque))
     .then((resp) => {
       setDetalhesSaque(resp.data);
       alterarVisibilidadeLoader(resp.data);
+      esconderCardLoader();
     })
     .catch((error) => {
       tratarErro('', error);

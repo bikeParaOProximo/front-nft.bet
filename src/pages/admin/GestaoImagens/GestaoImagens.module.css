@@ -47,12 +47,5 @@
 
   .linhaPrincipal{display: none;}
 
-  .coluna1{width: 20%;}
-  .coluna2, .coluna3{width: 40%;}
-
-  .coluna4{
-    width: 100%;
-  }
-
-  .btnDetalhes{margin: 10px 0 20px 0;}
+  .coluna2, .coluna3, .coluna4, .coluna5{width: 100%;}
 }

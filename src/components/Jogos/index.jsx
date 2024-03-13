@@ -16,7 +16,10 @@ export default function Jogos({tituloJogos, tipo}){
           <>
             <header className={styles.headerSection}>
               <h2 className={styles.tituloSecao}>{tituloJogos}</h2>
-              <input type="text" className={styles.inputPesquisa}
+
+              <input 
+                type="text" 
+                className={styles.inputPesquisa}
                 placeholder='Pesquise um jogo'
                 name='filtro'
                 onChange={(e) => setFiltro(e.target.value)}

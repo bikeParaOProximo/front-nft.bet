@@ -122,9 +122,11 @@ const useDeposito = () => {
   }
 
   const buscarDeposito = (codigoDeposito) => {
+    exibirCardLoader();
     api.get("/depositos/".concat(codigoDeposito))
     .then((resp) => {
-      setDetalhesDeposito(resp.data)
+      setDetalhesDeposito(resp.data);
+      esconderCardLoader();
     })
     .catch((error) => {
       tratarErro('', error);

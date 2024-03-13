@@ -62,7 +62,7 @@ export default function GestaoDepositos(){
 
         {
           depositos.slice().reverse().filter((deposito) => deposito.statusDeposito == ordenar)
-          .filter((deposito) => deposito.usuario.toLowerCase().includes(filtro.toLowerCase()))
+          .filter((deposito) => deposito.email.toLowerCase().includes(filtro.toLowerCase()))
           .map((deposito, index) => (
             <div key={deposito.codigo} className={styles.linha+" "+styles[(index % 2 == 0) ? "par" : "impar"]}>
               <div className={styles.coluna1}>
@@ -81,7 +81,7 @@ export default function GestaoDepositos(){
               </div>
 
               <div className={styles.coluna4}>
-                <p className={styles.textoLinha}>{deposito.usuario}</p>
+                <p className={styles.textoLinha}>{deposito.email.length > 9 ? deposito.email.substring(0, 10)+"..." : deposito.email}</p>
               </div>
 
               <div className={styles.coluna5}>

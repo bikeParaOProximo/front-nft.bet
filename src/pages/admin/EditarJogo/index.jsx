@@ -3,6 +3,8 @@ import Container from "../../../components/layout/Container";
 import HeaderAdmin from "../../../components/layout/HeaderAdmin";
 import FormularioJogo from '../../../components/formularios/FormularioJogo';
 import useJogos from "../../../hooks/useJogos";
+import Loader from '../../../components/Loader';
+
 
 export default function EditarJogo(){
 
@@ -14,12 +16,16 @@ export default function EditarJogo(){
         destino={"/adm/jogos"}
       />
 
-      <FormularioJogo
-        jogo={jogo}
-        preencherJogo={preencherJogo}
-        executarAcao={editarJogo}
-        txtBotao={"Editar"}
-      />
+      {
+        jogo.codigo ? (
+          <FormularioJogo
+            jogo={jogo}
+            preencherJogo={preencherJogo}
+            executarAcao={editarJogo}
+            txtBotao={"Editar"}
+          />
+        ) : <Loader/>
+      }
     </Container>
   )
 }

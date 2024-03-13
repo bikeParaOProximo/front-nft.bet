@@ -27,6 +27,7 @@ export default function FormularioLogin(){
         entidade={usuario.senha}
         preencherEntidade={preencherUsuario}
       />
+      <Link className={styles.textoRecuperarSenha} to={"/recuperarSenha"}>Recuperar senha</Link>
 
       <button 
         className={[(!usuario.email || !usuario.senha) && "desativado"]}
@@ -35,7 +36,6 @@ export default function FormularioLogin(){
         Login
       </button>
 
-      <Link className={styles.textoRodapeFormularioLogin} to={"/recuperarSenha"}>Recuperar senha</Link>
       <Link className={styles.textoRodapeFormularioLogin} to={"/cadastro"}>Não possui conta?</Link>
     </form>
   );

@@ -20,6 +20,10 @@ export default function Footer(){
       <Link>
         <img src={iconTelegram} className={styles.iconFooter}/>
       </Link>
+
+      <p className={styles.textoFooter}>
+        Jogue com responsabilidade! O jogo pode ser prejudicial se não for controlado e feito com responsabilidade. Por isso, leia todas as informações disponíveis na nossa seção de Jogo Responsável.
+      </p>
     </footer>
   )
 }
