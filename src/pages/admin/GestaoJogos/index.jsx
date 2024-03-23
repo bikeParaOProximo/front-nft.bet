@@ -1,14 +1,14 @@
 import styles from './GestaoJogos.module.css';
 
 //Components
-import PainelGestao from '../../../components/PainelGestao';
+import PainelGestao from '../../../components/lists/PainelGestao';
 import Container from "../../../components/layout/Container";
 import HeaderAdmin from "../../../components/layout/HeaderAdmin";
 
 //Hooks
 import { useState } from 'react';
 import useJogos from '../../../hooks/useJogos';
-import BotaoLink from '../../../components/BotaoLink';
+import BotaoLink from '../../../components/utils/BotaoLink';
 
 
 export default function GestaoJogos(){

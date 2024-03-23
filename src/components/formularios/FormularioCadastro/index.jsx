@@ -1,8 +1,8 @@
 import styles from './FormularioCadastro.module.css';
 import useFormularios from '../../../hooks/useFormularios';
 import useUSuario from '../../../hooks/useUsuario'
-import InputNumerico from '../../InputNumerico';
-import InputSenha from '../../InputSenha';
+import InputNumerico from '../../itensFormulario/InputNumerico';
+import InputSenha from '../../itensFormulario/InputSenha';
 import { Link } from 'react-router-dom';
 import useValidacoes from '../../../hooks/useValidacoes';
 import { useEffect } from 'react';

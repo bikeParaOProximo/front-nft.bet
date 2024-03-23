@@ -5,12 +5,15 @@ import useMessageBox from "./useMessageBox";
 import useSessao from './useSessao';
 import useLoader from "./useLoader";
 import useErros from './useErros';
+import UsePaginacao from './usePaginacao';
 
 const useDadosUsuario = () => {
 
   //Blobal
   const {alterarVisibilidadeLoader, exibirCardLoader, esconderCardLoader} = useLoader();
   const {tratarErro} = useErros();
+  const {indicePaginacao, posicaoIndice, setPosicaoIndice} = UsePaginacao();
+
 
   //Usuários (*)
   const [usuarios, setUsuarios] = useState([]);
@@ -19,15 +22,24 @@ const useDadosUsuario = () => {
 
   if(location.pathname == "/adm/usuarios"){
     useEffect(() => {
-      api.get("/usuarios")
+      api.get("/usuarios", {
+        params: {
+          size: 2,
+          page: indicePaginacao
+        }
+      })
       .then((resp) => {
-        setUsuarios(resp.data);
-        alterarVisibilidadeLoader(resp.data);
+        setUsuarios(resp.data.content);
+        alterarVisibilidadeLoader(resp.data.content);
+        setPosicaoIndice({...posicaoIndice, 
+          primeiro: resp.data.first,
+          ultimo: resp.data.last
+        })
       })
       .catch((error) => {
         tratarErro('', error);
       });
-    }, [])
+    }, [indicePaginacao])
   }
 
   //Usuário (1)

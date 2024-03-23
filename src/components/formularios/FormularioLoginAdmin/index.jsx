@@ -1,7 +1,7 @@
 import styles from './FormularioLoginAdmin.module.css';
 
 import useAdmin from "../../../hooks/useAdmin";
-import InputSenha from '../../InputSenha';
+import InputSenha from '../../itensFormulario/InputSenha';
 
 export default function FormularioLoginAdmin(){
 

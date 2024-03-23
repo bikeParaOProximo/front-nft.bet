@@ -1,7 +1,7 @@
-import InputNumerico from '../../InputNumerico';
+import InputNumerico from '../../itensFormulario/InputNumerico';
 import useFormularios from '../../../hooks/useFormularios';
 import useUsuario from '../../../hooks/useUsuario';
-import InputSenha from '../../InputSenha';
+import InputSenha from '../../itensFormulario/InputSenha';
 import { useEffect } from 'react';
 
 
@@ -71,7 +71,7 @@ export default function FormularioRecuperarSenha(){
               className={[(!usuario.confirmacao || !usuario.novaSenha || !usuario.confirmacaoNovaSenha) && "desativado"]}
               disabled={(usuario.confirmacao && usuario.novaSenha && usuario.confirmacaoNovaSenha) ? false : true}
             >
-              Solicitar código
+              Alterar senha
             </button>
           </>
         )

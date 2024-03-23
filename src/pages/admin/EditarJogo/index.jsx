@@ -3,7 +3,7 @@ import Container from "../../../components/layout/Container";
 import HeaderAdmin from "../../../components/layout/HeaderAdmin";
 import FormularioJogo from '../../../components/formularios/FormularioJogo';
 import useJogos from "../../../hooks/useJogos";
-import Loader from '../../../components/Loader';
+import Loader from '../../../components/utils/Loader';
 
 
 export default function EditarJogo(){

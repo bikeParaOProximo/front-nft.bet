@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import BotaoLink from '../../../components/BotaoLink';
-import PainelGestao from '../../../components/PainelGestao';
+import BotaoLink from '../../../components/utils/BotaoLink';
+import PainelGestao from '../../../components/lists/PainelGestao';
 import Container from '../../../components/layout/Container';
 import HeaderAdmin from '../../../components/layout/HeaderAdmin';
 import useImagens from '../../../hooks/useImagens';

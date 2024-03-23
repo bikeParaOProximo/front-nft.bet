@@ -1,0 +1,17 @@
+.containerPaginacao{
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+}
+
+.botaoPaginacao{
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.indicePaginacao{
+  margin: 0 10px;
+}

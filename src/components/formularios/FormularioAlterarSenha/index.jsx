@@ -1,8 +1,8 @@
 import styles from './FormularioAlterarSenha.module.css';
 import iconFechar from '../../../assets/icons/fechar.png';
 import useUsuario from '../../../hooks/useUsuario';
-import Sobreposicao from '../../../components/Sobreposicao';
-import InputSenha from '../../../components/InputSenha';
+import Sobreposicao from '../../../components/itensFormulario/Sobreposicao';
+import InputSenha from '../../../components/itensFormulario/InputSenha';
 
 
 export default function FormularioAlterarSenha({executarAcao}){

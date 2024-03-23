@@ -1,6 +1,5 @@
 //Components
-import Loader from '../../../components/Loader';
-import FormularioBonus from '../../../components/formularios/FormularioBonus';
+import Loader from '../../../components/utils/Loader';
 import FormularioImagem from '../../../components/formularios/FormularioImagem';
 import Container from '../../../components/layout/Container';
 import HeaderAdmin from '../../../components/layout/HeaderAdmin';

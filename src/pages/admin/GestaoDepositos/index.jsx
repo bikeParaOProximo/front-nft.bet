@@ -1,14 +1,14 @@
 import styles from './GestaoDepositos.module.css';
 
 //Components
-import PainelGestao from '../../../components/PainelGestao';
+import PainelGestao from '../../../components/lists/PainelGestao';
 import Container from "../../../components/layout/Container";
 import HeaderAdmin from "../../../components/layout/HeaderAdmin";
 
 //Hooks
 import { useState } from 'react';
 import useDeposito from '../../../hooks/useDeposito';
-import BotaoLink from '../../../components/BotaoLink';
+import BotaoLink from '../../../components/utils/BotaoLink';
 
 
 export default function GestaoDepositos(){

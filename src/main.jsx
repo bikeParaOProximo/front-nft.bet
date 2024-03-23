@@ -12,14 +12,19 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-//USER pages
-import PageError from './pages/PageError/index.jsx';
-import Home from './pages/user/Home/index.jsx';
-import Conta from './pages/user/Conta/index.jsx';
-import Deposito from './pages/user/Deposito/index.jsx';
-import Saque from './pages/user/Saque/index.jsx';
-import Bonus from './pages/user/Bonus/index.jsx';
-import Jogo from './pages/user/Jogo/index.jsx';
+//PUBLIC pages
+import ErrorPage from './pages/custom/ErrorPage/index.jsx';
+import Home from './pages/public/Home/index.jsx';
+import Cadastro from './pages/public/Cadastro/index.jsx';
+import Login from './pages/public/Login/index.jsx';
+import RecuperarSenha from './pages/public/RecuperarSenha/index.jsx';
+
+//PRIVATE Pages
+import Conta from './pages/private/Conta/index.jsx';
+import Deposito from './pages/private/Deposito/index.jsx';
+import Saque from './pages/private/Saque/index.jsx';
+import Bonus from './pages/private/Bonus/index.jsx';
+import Jogo from './pages/private/Jogo/index.jsx';
 
 //ADDMIN pages
 import LoginAdmin from './pages/admin/LoginAdmin/index.jsx';
@@ -36,6 +41,12 @@ import GestaoSaques from './pages/admin/GestaoSaques';
 import DetalhesUsuario from './pages/admin/DetalhesUsuario/index.jsx';
 import DetalhesDeposito from './pages/admin/DetalhesDeposito';
 import DetalhesSaque from './pages/admin/DetalhesSaque/index.jsx';
+import GestaoImagens from './pages/admin/GestaoImagens/index.jsx';
+import SalvarImagem from './pages/admin/SalvarImagem/index.jsx';
+import EditarImagem from './pages/admin/EditarImagem/index.jsx';
+
+//GAMES page
+import Mines from './games/Mines/index.jsx';
 
 //contextos
 import { SessaoProvider } from './contexts/SessaoContext.jsx';
@@ -43,20 +54,14 @@ import { FormulariosProvider } from './contexts/FormulariosContext.jsx';
 import { MessageBoxProvider } from './contexts/MessageBoxContext.jsx';
 import { AdminSessaoProvider } from './contexts/AdminSessaoContext.jsx';
 import { LoaderProvider } from './contexts/LoaderContext.jsx';
-import Mines from './games/Mines/index.jsx';
-import GestaoImagens from './pages/admin/GestaoImagens/index.jsx';
-import SalvarImagem from './pages/admin/SalvarImagem/index.jsx';
-import EditarImagem from './pages/admin/EditarImagem/index.jsx';
-import Cadastro from './pages/public/Cadastro/index.jsx';
-import Login from './pages/public/Login/index.jsx';
-import RecuperarSenha from './pages/public/RecuperarSenha/index.jsx';
 import { SaldoProvider } from './contexts/SaldoContext.jsx';
+import { PaginacaoProvider } from './contexts/PaginacaoContext.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
-    errorElement: <PageError/>,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: "/",
@@ -176,9 +181,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <FormulariosProvider>
         <MessageBoxProvider>
           <LoaderProvider>
-            <SaldoProvider>
-              <RouterProvider router={router}/>
-            </SaldoProvider>
+            <PaginacaoProvider>
+              <SaldoProvider>
+                <RouterProvider router={router}/>
+              </SaldoProvider>
+            </PaginacaoProvider>
           </LoaderProvider>
         </MessageBoxProvider>
       </FormulariosProvider>

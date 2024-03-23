@@ -1,8 +1,8 @@
 import styles from './FormularioAdcionarChave.module.css';
 import iconFechar from '../../../assets/icons/fechar.png';
 import useChaves from '../../../hooks/useChaves';
-import Sobreposicao from '../../Sobreposicao';
-import InputNumerico from '../../InputNumerico';
+import Sobreposicao from '../../itensFormulario/Sobreposicao';
+import InputNumerico from '../../itensFormulario/InputNumerico';
 
 export default function FormularioAdcionarChave({executarAcao}){
 

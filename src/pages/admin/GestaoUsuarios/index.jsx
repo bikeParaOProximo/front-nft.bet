@@ -1,18 +1,18 @@
 import styles from './GestaoUsuarios.module.css';
 
 //Components
-import PainelGestao from '../../../components/PainelGestao';
+import PainelGestao from '../../../components/lists/PainelGestao';
 import Container from "../../../components/layout/Container";
 import HeaderAdmin from "../../../components/layout/HeaderAdmin";
 
 //Hooks
 import { useState } from 'react';
 import useDadosUsuario from '../../../hooks/useDadosUsuario';
-import BotaoLink from '../../../components/BotaoLink';
+import BotaoLink from '../../../components/utils/BotaoLink';
 
 //Utils
 import formatarCPF from '../../../utils/formatarCPF';
-
+import BotaoPaginacao from '../../../components/utils/BotaoPaginacao';
 
 
 export default function GestaoUsuarios(){
@@ -97,6 +97,7 @@ export default function GestaoUsuarios(){
         }
       </PainelGestao>
 
+      <BotaoPaginacao/>
     </Container>
   )
 }

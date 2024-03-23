@@ -6,8 +6,8 @@ import iconCopiar from '../../../assets/icons/copiar.png';
 //Components
 import Container from '../../../components/layout/Container';
 import HeaderAdmin from '../../../components/layout/HeaderAdmin';
-import Loader from '../../../components/Loader';
-import BotaoLink from '../../../components/BotaoLink';
+import Loader from '../../../components/utils/Loader';
+import BotaoLink from '../../../components/utils/BotaoLink';
 
 //Hooks
 import usedadosUsuario from '../../../hooks/useDadosUsuario';

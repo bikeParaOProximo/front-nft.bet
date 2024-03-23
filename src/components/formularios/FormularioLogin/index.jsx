@@ -2,7 +2,7 @@ import styles from './FormularioLogin.module.css';
 
 import useLogin from '../../../hooks/useUsuario';
 import { Link } from 'react-router-dom';
-import InputSenha from '../../InputSenha';
+import InputSenha from '../../itensFormulario/InputSenha';
 
 
 export default function FormularioLogin(){

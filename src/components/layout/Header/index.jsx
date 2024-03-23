@@ -5,7 +5,7 @@ import iconMenu from '../../../assets/icons/iconMenu.png';
 import logo from '../../../assets/imagens/logo.png';
 
 //Components
-import Saldo from '../../../components/Saldo';
+import Saldo from '../../../components/utils/Saldo';
 
 //Hooks
 import useSessao from '../../../hooks/useSessao';

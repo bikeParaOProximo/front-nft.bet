@@ -1,7 +1,7 @@
 import styles from './GestaoBonus.module.css';
 
 //Components
-import PainelGestao from '../../../components/PainelGestao';
+import PainelGestao from '../../../components/lists/PainelGestao';
 import Container from "../../../components/layout/Container";
 import HeaderAdmin from "../../../components/layout/HeaderAdmin";
 
@@ -11,7 +11,7 @@ import useBonus from '../../../hooks/useBonus';
 
 //Utils
 import formatarData from '../../../utils/formatarData';
-import BotaoLink from '../../../components/BotaoLink';
+import BotaoLink from '../../../components/utils/BotaoLink';
 
 
 export default function GestaoBonus(){
